@@ -139,8 +139,8 @@ impl Hash for Word {
 #[derive(Archive, Deserialize, Serialize, Default)]
 #[archive_attr(derive(CheckBytes))]
 pub struct WordMap {
-    data: HashMap<u64, Box<[WordRef]>>,
-    word_references: Box<[Word]>,
+    pub data: HashMap<u64, Box<[WordRef]>>,
+    pub word_references: Box<[Word]>,
 }
 
 impl Debug for WordMap {

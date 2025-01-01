@@ -72,7 +72,7 @@ pub struct SymSpell {
     /// The minimum frequency count for dictionary words to be considered correct spellings.
     count_threshold: i64,
     max_length: usize,
-    words: HashMap<String, i64>,
+    pub words: HashMap<String, i64>,
     pub deletes: WordMap,
 }
 
