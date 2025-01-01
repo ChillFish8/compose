@@ -793,7 +793,7 @@ fn parse_words(text: &str) -> Vec<String> {
         .collect()
 }
 
-fn edits_prefix(max_dictionary_edit_distance: i64, key: &str) -> HashSet<Cow<str>> {
+pub fn edits_prefix(max_dictionary_edit_distance: i64, key: &str) -> HashSet<Cow<str>> {
     let mut hash_set = HashSet::new();
 
     let key_len = key.len() as i64;
@@ -851,6 +851,12 @@ fn edits(
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn test_edits() {
+        let edits = edits_prefix(2, "hello");
+        dbg!(edits.len(), edits);
+    }
 
     #[test]
     fn bench_correct() {

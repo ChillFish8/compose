@@ -6,5 +6,5 @@ mod wordmaps;
 
 pub use composition::Composition;
 pub use suggestion::Suggestion;
-pub use symspell::{SymSpell, Verbosity};
+pub use symspell::{SymSpell, Verbosity, edits_prefix};
 pub use wordmaps::WordRepr;
