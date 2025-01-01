@@ -191,6 +191,7 @@ impl SymSpell {
                     .or_insert_with(|| vec![word.clone()]);
             }
         }
+        dbg!(deletes.len());
 
         self.deletes = WordMap::with_dictionary(deletes);
     }
